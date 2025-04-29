@@ -1,0 +1,14 @@
+section {
+    position: relative;
+    left: 30px;
+    margin-top: x;
+    padding: 100px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.096);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin: 20px auto;
+    width: 90%;
+    box-shadow: 0 4px 10px rgb(0, 0, 0);
+    transition: transform 0.3s;
+}

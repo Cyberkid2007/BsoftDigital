@@ -1,0 +1,147 @@
+       /* General reset and styling */
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-image: url('8.jpg');
+        background-size: 500px 300px;
+        background-size: cover;
+        background-size: contain;
+        background-attachment: fixed;
+        background-attachment: fixed;
+    }
+    /* Navbar styling */
+    nav {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.1); /* Transparency for glassmorphism */
+        backdrop-filter: blur(10px); /* Frosted glass effect */
+        padding: 15px 30px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    nav .logo {
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    nav .logo img {
+        height: 40px; /* You can adjust the logo size */
+    }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        margin: 0 15px;
+        transition: color 0.3s ease;
+    }
+    nav a:hover {
+        color: #36be91;
+    }
+
+
+    h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        color: #fff;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Footer styling */
+    footer {
+        width: 100%;
+        padding: 20px 0;
+        background: rgba(255, 255, 255, 0.1); /* Transparency for glassmorphism */
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    /* Responsive design */
+    @media (max-width: 600px) {
+        .container {
+            padding: 20px;
+        }
+        input[type="text"] {
+            width: 100%;
+        }
+    }
+
+    section {
+        position: relative;
+        left: 30px;
+        margin-top: x;
+        padding: 100px 20px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.096);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        margin: 20px auto;
+        width: 90%;
+        box-shadow: 0 4px 10px rgb(0, 0, 0);
+        transition: transform 0.3s;
+    }
+
+    /* Terminal (Pinned Bottom Left & Responsive) */
+    .terminal-container {
+        position: fixed;
+        bottom: 70px;
+        left: 20px;
+        width: 90%;
+        max-width: 250px;
+        background: rgba(0, 0, 0, 0.9);
+        color: #33ff33;
+        padding: 15px;
+        border-radius: 10px;
+        font-family: "Courier New", monospace;
+        box-shadow: 0 4px 10px rgba(0, 255, 0, 0.3);
+        border: 2px solid #33ff33;
+        z-index: 10;
+    }
+
+    /* Terminal Header */
+    .terminal-header {
+        background: #111;
+        padding: 5px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    /* Terminal Body */
+    .terminal-body {
+        padding: 10px;
+    }
+
+    /* Terminal Input */
+    #terminal-output {
+        min-height: 150px;
+    }
+    #terminal-input {
+        width: 100%;
+        background: transparent;
+        border: none;
+        color: #33ff33;
+        font-size: 16px;
+        padding: 5px;
+        outline: none;
+    }
+
+    
