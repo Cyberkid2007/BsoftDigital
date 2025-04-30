@@ -1,3 +1,18 @@
+   /* General reset and styling */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('8.jpg');
+    background-size: 500px 300px;
+    background-size: cover;
+    background-size: contain;
+    background-attachment: fixed;
+    background-attachment: fixed;
+}
 section {
     position: relative;
     left: 30px;
