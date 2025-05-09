@@ -2,20 +2,413 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="about.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ContactMe</title>
+    <title>Contact - BsoftDigital</title>
+    <link rel="stylesheet" href="idex.css">
+    <style>
+        /* Additional styles for the contact page */
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .contact-hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .contact-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+        
+        .contact-sections {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .contact-form-section {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        .contact-info-section {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-form {
+            background-color: #000000;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            background-color: #5f6974a4;
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #4e3b3b;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: inherit;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-group select {
+            background-color: rgba(138, 94, 94, 0.562);
+        }
+        
+        .submit-button {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .submit-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .contact-info {
+            background-color: #07050571;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        
+        .contact-method {
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-method h3 {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-method h3 svg {
+            margin-right: 0.5rem;
+        }
+        
+        .business-hours {
+            margin-top: 2rem;
+        }
+        
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 0.5rem;
+        }
+        
+        .hours-table tr {
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .hours-table tr:last-child {
+            border-bottom: none;
+        }
+        
+        .hours-table td {
+            padding: 0.5rem 0;
+        }
+        
+        .hours-table td:last-child {
+            text-align: right;
+        }
+        
+        .map-section {
+            margin-top: 3rem;
+        }
+        
+        .map-container {
+            height: 400px;
+            background-color: #383535b7;
+            border-radius: 8px;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .faq-section {
+            margin-top: 3rem;
+        }
+        
+        .faq-item {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1rem;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background-color: #0052a3;
+        }
+    </style>
 </head>
 <body>
-     
-    <section id="contact">
-    <h2>Let's Connect</h2>
-    <p>Email: chikwanhabrandon0@gmail.com</p>
-    <p>LinkedIn: linkedin.com/in/yourprofile</p>
-    <p>WhatsApp: 077448766</p>
-    <p>GitHub: github.com/Cyberkid2007</p>
-</section>
-
+    <nav>
+        <a href="index.html" class="logo"><img src="logo.png" alt="Logo"> BsoftDigital</a>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="services.html">Services</a>
+        </div>
+    </nav>
+    
+    <div class="terminal-container">
+        <div class="terminal-header">Cyberverse Terminal</div>
+        <div class="terminal-body">
+            <pre id="terminal-output">root@commander:~# echo "Let's connect!"</pre>
+            <input type="text" id="terminal-input" placeholder="Type a command..." autofocus>
+        </div>
+    </div>
+    
+    <div class="contact-container">
+        <section class="contact-hero">
+            <h1>Get In Touch</h1>
+            <p>Let's discuss how we can bring your project to life</p>
+        </section>
+        
+        <section class="contact-intro">
+            <p>Have a project in mind or questions about our services? We're here to help. Fill out the form below or use your preferred contact method to reach us.</p>
+        </section>
+        
+        <div class="contact-sections">
+            <section class="contact-form-section">
+                <h2>Send Us a Message</h2>
+                <form class="contact-form" action="#" method="POST" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service of Interest</label>
+                        <select id="service" name="service">
+                            <option value="">-- Select a Service --</option>
+                            <option value="web-starter">Web Development - Starter Package</option>
+                            <option value="web-business">Web Development - Business Package</option>
+                            <option value="web-ecommerce">Web Development - E-Commerce Package</option>
+                            <option value="custom-software">Custom Software Development</option>
+                            <option value="mobile-app">Mobile Application Development</option>
+                            <option value="consulting">Technical Consulting</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </section>
+            
+            <section class="contact-info-section">
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    
+                    <div class="contact-method">
+                        <h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            Phone
+                        </h3>
+                        <p>(123) 456-7890</p>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            Email
+                        </h3>
+                        <p>info@bsoftdigital.com</p>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Address
+                        </h3>
+                        <p>123 Tech Boulevard<br>Innovation District<br>Cityville, ST 12345</p>
+                    </div>
+                    
+                    <div class="business-hours">
+                        <h3>Business Hours</h3>
+                        <table class="hours-table">
+                            <tr>
+                                <td>Monday - Friday</td>
+                                <td>9:00 AM - 6:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Saturday</td>
+                                <td>10:00 AM - 2:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td>Closed</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <section class="map-section">
+            <h2>Find Us</h2>
+            <div class="map-container">
+                <p>Map placeholder - Google Maps embed would go here</p>
+            </div>
+        </section>
+        
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">How long does it typically take to complete a website?</div>
+                <div class="faq-answer">
+                    <p>Our development timeline varies based on project scope. Simple websites typically take 2-4 weeks, while more complex projects with custom functionality may require 6-12 weeks. During our initial consultation, we'll provide a more specific timeline based on your requirements.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Do you provide web hosting services?</div>
+                <div class="faq-answer">
+                    <p>Yes, we offer web hosting solutions tailored to your website's needs. Our hosting packages include regular maintenance, security updates, and technical support to ensure your site remains secure and performs optimally.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What information do you need to start a custom software project?</div>
+                <div class="faq-answer">
+                    <p>To get started, we need to understand your business goals, target users, functionality requirements, and any technical constraints. Our discovery process will help identify these elements, but coming prepared with a general idea of your objectives will help streamline the initial consultation.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Do you offer maintenance and support after project completion?</div>
+                <div class="faq-answer">
+                    <p>Absolutely! We offer various support and maintenance packages to keep your website or software application running smoothly. These can include regular updates, security monitoring, performance optimization, and technical support for any issues that arise.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 BsoftDigital. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script src="terminal.js"></script>
+    <script>
+        // Simple form validation and handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // In a real implementation, you would send the form data to a server
+            alert('Thank you for your message! We\'ll get back to you shortly.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
-
