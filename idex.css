@@ -190,7 +190,14 @@ section {
     box-shadow: 0 4px 10px rgba(0, 255, 0, 0.3);
     border: 2px solid #33ff33;
     z-index: 10;
+    /* Added for auto-hide functionality */
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
 }
+
+/* We don't need these class-based styles as we're using inline styles in JS */
+/* for better compatibility with the existing HTML structure */
 
 /* Terminal Header */
 .terminal-header {
@@ -323,6 +330,8 @@ section {
         max-width: none;
     }
     
+    /* Terminal positioning is handled in JavaScript for mobile */
+    
     .hero h1 {
         font-size: 1.8rem;
     }
@@ -364,6 +373,8 @@ section {
     #terminal-output {
         min-height: 80px;
     }
+    
+    /* Button positioning is handled in JavaScript */
     
     /* Reduce section padding in landscape */
     section {
