@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - BsoftDigital</title>
+    <link rel="stylesheet" href="idex.css">
+    <style>
+        /* Additional styles for the services page */
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .services-hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .services-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+        
+        .services-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .service-category {
+            background-color: #8539393b;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .service-category h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #992c2c28;
+        }
+        
+        .packages {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        
+        .package {
+            flex: 1;
+            min-width: 280px;
+            max-width: 350px;
+            background-color: rgba(85, 34, 34, 0.671);
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgb(0, 0, 0);
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .package:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .package h3 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .package .price {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #0066cc;
+        }
+        
+        .package .features {
+            margin-bottom: 1.5rem;
+        }
+        
+        .package .features li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .package .features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #0066cc;
+        }
+        
+        .package .cta {
+            display: block;
+            text-align: center;
+            background-color: #0066cc;
+            color: white;
+            padding: 0.75rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        
+        .package .cta:hover {
+            background-color: #0052a3;
+        }
+        
+        .process-steps {
+            margin-top: 3rem;
+        }
+        
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+        
+        .step-number {
+            background-color: #0066cc;
+            color: rgb(128, 69, 69);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            flex-grow: 1;
+        }
+        
+        .step-content h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .technologies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .tech-tag {
+            background-color: #1b16164b;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .testimonials {
+            margin-top: 3rem;
+            padding: 2rem;
+            background-color: #242121;
+            border-radius: 8px;
+        }
+        
+        .testimonial {
+            font-style: italic;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: rgb(82, 55, 55);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgb(0, 0, 0);
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 2rem;
+            background-color: #344a63cb;
+            border-radius: 8px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #0066cc;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #0052a3;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo"><img src="logo.png" alt="Logo"> BsoftDigital</a>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="service.html">Services</a>
+        </div>
+    </nav>
+    
+    <div class="terminal-container">
+        <div class="terminal-header">Cyberverse Terminal</div>
+        <div class="terminal-body">
+            <pre id="terminal-output">root@commander:~# ls services/</pre>
+            <input type="text" id="terminal-input" placeholder="Type a command..." autofocus>
+        </div>
+    </div>
+    
+    <div class="services-container">
+        <section class="services-hero">
+            <h1>Our Services</h1>
+            <p>Transforming ideas into powerful digital solutions</p>
+        </section>
+        
+        <section class="service-intro">
+            <p>At BsoftDigital, we deliver custom software solutions that address unique business challenges. Our expertise spans web development, custom software creation, and technical consulting to ensure your project's success.</p>
+        </section>
+        
+        <section class="service-category">
+            <h2>Web Development Packages</h2>
+            <div class="packages">
+                <div class="package">
+                    <h3>Starter</h3>
+                    <div class="price">$1,499</div>
+                    <ul class="features">
+                        <li>Responsive website (up to 5 pages)</li>
+                        <li>Mobile-friendly design</li>
+                        <li>Basic SEO setup</li>
+                        <li>Contact form integration</li>
+                        <li>Social media links</li>
+                        <li>3 rounds of revisions</li>
+                        <li>1 month of support</li>
+                    </ul>
+                    <a href="contact.html" class="cta">Get Started</a>
+                </div>
+                
+                <div class="package">
+                    <h3>Business</h3>
+                    <div class="price">$3,499</div>
+                    <ul class="features">
+                        <li>Responsive website (up to 10 pages)</li>
+                        <li>Custom design with branding</li>
+                        <li>Content Management System</li>
+                        <li>Advanced SEO optimization</li>
+                        <li>Blog functionality</li>
+                        <li>Newsletter integration</li>
+                        <li>Google Analytics setup</li>
+                        <li>5 rounds of revisions</li>
+                        <li>3 months of support</li>
+                    </ul>
+                    <a href="contact.html" class="cta">Get Started</a>
+                </div>
+                
+                <div class="package">
+                    <h3>E-Commerce</h3>
+                    <div class="price">$5,999</div>
+                    <ul class="features">
+                        <li>Full e-commerce functionality</li>
+                        <li>Product catalog (up to 100 products)</li>
+                        <li>Secure payment gateway integration</li>
+                        <li>Inventory management system</li>
+                        <li>Customer account portal</li>
+                        <li>Order tracking system</li>
+                        <li>Mobile-optimized shopping experience</li>
+                        <li>SEO & performance optimization</li>
+                        <li>Unlimited revisions during development</li>
+                        <li>6 months of support</li>
+                    </ul>
+                    <a href="contact.html" class="cta">Get Started</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="service-category">
+            <h2>Custom Software Development</h2>
+            <p>We design and build bespoke software solutions tailored to your specific business requirements. Our development process ensures high-quality, scalable, and secure applications that solve real business problems.</p>
+            
+            <h3>Our Custom Software Solutions:</h3>
+            <div class="services-grid">
+                <div class="package">
+                    <h3>Business Process Automation</h3>
+                    <ul class="features">
+                        <li>Workflow automation systems</li>
+                        <li>Document management solutions</li>
+                        <li>Business intelligence dashboards</li>
+                        <li>Integration with existing systems</li>
+                        <li>Custom reporting tools</li>
+                    </ul>
+                </div>
+                
+                <div class="package">
+                    <h3>Mobile Applications</h3>
+                    <ul class="features">
+                        <li>Native iOS and Android apps</li>
+                        <li>Cross-platform development</li>
+                        <li>Backend API development</li>
+                        <li>Push notification systems</li>
+                        <li>Offline functionality</li>
+                    </ul>
+                </div>
+                
+                <div class="package">
+                    <h3>Enterprise Solutions</h3>
+                    <ul class="features">
+                        <li>CRM systems</li>
+                        <li>ERP implementations</li>
+                        <li>Inventory management systems</li>
+                        <li>HR and payroll solutions</li>
+                        <li>Data migration services</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="process-steps">
+                <h3>Our Development Process:</h3>
+                
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Discovery & Requirements Analysis</h3>
+                        <p>We begin by understanding your business goals, processes, and challenges to define clear project requirements and success criteria.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Planning & Architecture Design</h3>
+                        <p>Our team creates a detailed project roadmap and technical architecture designed for performance, security, and scalability.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Agile Development</h3>
+                        <p>Using iterative development cycles, we build your software with continuous client feedback to ensure alignment with expectations.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Quality Assurance & Testing</h3>
+                        <p>Rigorous testing ensures your software is reliable, secure, and performs optimally across all intended environments.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Deployment & Training</h3>
+                        <p>We handle deployment and provide comprehensive training to ensure your team is ready to use the new software effectively.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Ongoing Support & Maintenance</h3>
+                        <p>Our relationship continues after launch with technical support, updates, and enhancements as your business evolves.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="technologies">
+                <h3>Technologies We Utilize:</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+                    <span class="tech-tag">JavaScript/Node.js</span>
+                    <span class="tech-tag">Python/Django</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Vue.js</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">SQL Databases</span>
+                    <span class="tech-tag">AWS/Cloud Hosting</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">REST APIs</span>
+                    <span class="tech-tag">Three.js</span>
+                </div>
+            </div>
+        </section>
+        
+        <section class="testimonials">
+            <h2>What Our Clients Say</h2>
+            
+            <div class="testimonial">
+                <p>"BsoftDigital transformed our business operations with a custom inventory management system that perfectly addressed our unique challenges. Their attention to detail and technical expertise exceeded our expectations."</p>
+                <div class="testimonial-author">- Sarah Johnson, Operations Director</div>
+            </div>
+            
+            <div class="testimonial">
+                <p>"The e-commerce platform developed by BsoftDigital helped us increase online sales by 45% in the first quarter after launch. Their responsive support team makes ongoing maintenance a breeze."</p>
+                <div class="testimonial-author">- Michael Chen, E-commerce Manager</div>
+            </div>
+        </section>
+        
+        <section class="cta-section">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let's discuss how we can help bring your vision to life with customized software solutions.</p>
+            <a href="contact.html" class="cta-button">Schedule a Consultation</a>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 BsoftDigital. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script src="terminal.js"></script>
+</body>
+</html>
