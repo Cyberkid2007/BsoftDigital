@@ -1,0 +1,347 @@
+
+/* General reset and styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('8.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    padding-top: 80px; /* Space for fixed navbar */
+    padding-bottom: 70px; /* Space for fixed footer */
+}
+
+/* Navbar styling */
+nav {
+    width: 100%;
+    background: rgba(0, 0, 0, 0); /* Transparency for glassmorphism */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    padding: 15px 30px;
+    box-shadow: 0 4px 12px rgba(235, 9, 9, 0.973);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
+
+nav .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    height: 40px; /* You can adjust the logo size */
+    margin-right: 10px;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: wavy;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Segoe UI';
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #36be91;
+}
+
+h1 {
+    font-size: 32px;
+    text-decoration: underline;
+    font-family: 'Franklin Gothic Medium';
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: gold;
+    box-shadow: 0 4px 12px rgba(235, 231, 9, 0.973);
+}
+h1:hover{
+    color: gold;
+    transition: color 0.9s ease;
+}
+
+/* Footer styling */
+footer {
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(255, 255, 255, 0.1); /* Transparency for glassmorphism */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgb(209, 212, 12);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    z-index: 900;
+}
+
+/* Main content sections */
+section {
+    position: relative;
+    margin-top: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin: 20px auto;
+    width: 90%;
+    box-shadow: 0 4px 12px rgba(9, 235, 77, 0.61);
+    transition: transform 0.9s;
+}
+
+/* Hero section */
+.hero {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+
+/* Terminal styling */
+.terminal-container {
+    position: fixed;
+    bottom: 70px;
+    left: 20px;
+    width: 90%;
+    max-width: 250px;
+    background: rgba(0, 0, 0, 0.9);
+    color: #33ff33;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+    box-shadow: 0 4px 10px rgba(255, 38, 0, 0.945);
+    border: 2px solid #33ff33;
+    z-index: 10;
+    /* Added for auto-hide functionality */
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, transform 0.9s ease, visibility 0.1s ease;
+}
+
+/* We don't need these class-based styles as we're using inline styles in JS */
+/* for better compatibility with the existing HTML structure */
+
+/* Terminal Header */
+.terminal-header {
+    background: #111;
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Terminal Body */
+.terminal-body {
+    padding: 10px;
+}
+
+/* Terminal Input */
+#terminal-output {
+    min-height: 150px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 14px;
+}
+
+#terminal-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #33ff33;
+    font-size: 16px;
+    padding: 5px;
+    outline: none;
+    font-family: "Courier New", monospace;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    /* Adjust navbar for mobile */
+    nav {
+        flex-direction: column;
+        padding: 10px 15px;
+    }
+    
+    nav .logo {
+        margin-bottom: 10px;
+    }
+    
+    nav div {
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    nav a {
+        margin: 5px;
+        font-size: 16px;
+    }
+    
+    /* Adjust body padding for mobile */
+    body {
+        padding-top: 120px; /* Increased for stacked navbar */
+    }
+    
+    /* Adjust section padding */
+    section {
+        padding: 20px 15px;
+        width: 95%;
+        margin: 15px auto;
+    }
+    
+    /* Adjust headings for mobile */
+    h1 {
+        font-size: 28px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+    
+    /* Adjust skills grid for mobile */
+    .skill-list {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Adjust terminal for mobile */
+    .terminal-container {
+        max-width: 200px;
+        left: 10px;
+        bottom: 80px;
+    }
+    
+    #terminal-output {
+        min-height: 120px;
+        font-size: 12px;
+    }
+    
+    #terminal-input {
+        font-size: 14px;
+    }
+}
+
+/* Small mobile (under 480px) */
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    body {
+        padding-top: 140px; /* Even more space for stacked navbar */
+    }
+    
+    nav .logo {
+        font-size: 20px;
+    }
+    
+    nav .logo img {
+        height: 30px;
+    }
+    
+    nav a {
+        font-size: 14px;
+        margin: 3px;
+    }
+    
+    /* Move terminal to bottom center on very small screens */
+    .terminal-container {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 80px;
+        width: 90%;
+        max-width: none;
+    }
+    
+    /* Terminal positioning is handled in JavaScript for mobile */
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    /* Ensure footer stays compact */
+    footer {
+        padding: 15px 0;
+        font-size: 14px;
+    }
+}
+
+/* Landscape orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+    /* Optimize for landscape mode on mobile */
+    body {
+        padding-top: 60px;
+    }
+    
+    nav {
+        flex-direction: row;
+        padding: 8px 15px;
+    }
+    
+    nav .logo {
+        margin-bottom: 0;
+    }
+    
+    /* Make terminal smaller in landscape */
+    .terminal-container {
+        max-width: 180px;
+        max-height: 200px;
+        bottom: 60px;
+    }
+    
+    #terminal-output {
+        min-height: 80px;
+    }
+    
+    /* Button positioning is handled in JavaScript */
+    
+    /* Reduce section padding in landscape */
+    section {
+        padding: 15px 10px;
+        margin: 10px auto;
+    }
+    
+    /* Compact footer in landscape */
+    footer {
+        padding: 10px 0;
+    }
+}
