@@ -18,10 +18,10 @@ body {
 /* Navbar styling */
 nav {
     width: 100%;
-    background: rgba(255, 255, 255, 0.1); /* Transparency for glassmorphism */
+    background: rgba(0, 0, 0, 0); /* Transparency for glassmorphism */
     backdrop-filter: blur(10px); /* Frosted glass effect */
     padding: 15px 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(235, 9, 9, 0.973);
     position: fixed;
     top: 0;
     left: 0;
@@ -57,6 +57,7 @@ nav a {
     font-size: 18px;
     margin: 0 15px;
     transition: color 0.3s ease;
+    animation: fadeInDown 3s ease forwards;
 }
 
 nav a:hover {
@@ -68,6 +69,8 @@ h1 {
     margin-bottom: 20px;
     color: #fff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 0.5rem;
+    animation: fadeInDown 3s ease forwards;
 }
 
 h2 {
@@ -75,12 +78,19 @@ h2 {
     margin-bottom: 15px;
     color: #fff;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 3s ease forwards;
 }
 
 h3 {
     font-size: 22px;
     margin-bottom: 10px;
     color: #fff;
+    animation: fadeInDown 3s ease forwards;
+}
+p {
+    font-size: 1.5rem;
+    animation: fadeInUp 3s ease forwards;
+    animation-delay: 0.5s;
 }
 
 /* Footer styling */
@@ -108,13 +118,13 @@ section {
     margin-top: 20px;
     padding: 30px 20px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.096);
+    background: rgba(255, 255, 255, 0);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     margin: 20px auto;
     width: 90%;
-    box-shadow: 0 4px 10px rgb(0, 0, 0);
-    transition: transform 0.3s;
+    box-shadow: 0 4px 12px rgba(9, 235, 77, 0.61);
+    transition: transform 0.9s;
 }
 
 /* Hero section */
@@ -142,6 +152,7 @@ section {
     list-style-type: none;
     margin: 20px auto;
     max-width: 800px;
+    animation: fadeInDown 3s ease forwards;
 }
 
 .skill-list li {
@@ -158,18 +169,7 @@ section {
 }
 
 /* Projects section */
-.project {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 
 .project:hover {
     transform: translateY(-5px);
@@ -187,13 +187,13 @@ section {
     padding: 15px;
     border-radius: 10px;
     font-family: "Courier New", monospace;
-    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(255, 38, 0, 0.945);
     border: 2px solid #33ff33;
     z-index: 10;
     /* Added for auto-hide functionality */
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+    transition: opacity 0.5s ease, transform 0.9s ease, visibility 0.1s ease;
 }
 
 /* We don't need these class-based styles as we're using inline styles in JS */
@@ -385,5 +385,44 @@ section {
     /* Compact footer in landscape */
     footer {
         padding: 10px 0;
+    }
+}
+
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+   /* Floating chess piece animation */
+   .floating-piece {
+    position: absolute;
+    font-size: 5rem;
+    opacity: 0.15;
+    animation: floatUpDown 9s ease-in-out infinite;
+    user-select: none;
+}
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
     }
 }
