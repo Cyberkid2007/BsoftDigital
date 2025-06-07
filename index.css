@@ -12,6 +12,13 @@ body {
     background-size: cover;
     background-attachment: fixed;
     color: #fff;
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
     padding-top: 80px; /* Space for fixed navbar */
     padding-bottom: 70px; /* Space for fixed footer */
 }
@@ -60,6 +67,7 @@ nav a {
     font-family: 'Segoe UI';
     margin: 0 15px;
     transition: color 0.3s ease;
+    animation: fadeInDown 3s ease forwards;
 }
 
 nav a:hover {
@@ -67,19 +75,31 @@ nav a:hover {
 }
 
 h1 {
-    font-size: 32px;
-    text-decoration: underline;
-    font-family: 'Franklin Gothic Medium';
-    margin-bottom: 20px;
-    color: #fff;
-    text-shadow: gold;
-    box-shadow: 0 4px 12px rgba(235, 231, 9, 0.973);
+    position:center;
+    font-size: 5rem;
+    font-weight: bolder;
+    opacity: 0.15;
+    animation: floatUpDown 9s ease-in-out infinite;
+    user-select: none;
 }
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
 h1:hover{
     color: gold;
     transition: color 0.9s ease;
 }
-
+p {
+    font-size: 1.5rem;
+    animation: fadeInUp 3s ease forwards;
+    animation-delay: 0.5s;
+}
 /* Footer styling */
 footer {
     width: 100%;
@@ -345,3 +365,41 @@ section {
         padding: 10px 0;
     }
 }
+
+     /* Floating chess piece animation */
+     .floating-piece {
+        position: absolute;
+        font-size: 5rem;
+        opacity: 0.15;
+        animation: floatUpDown 9s ease-in-out infinite;
+        user-select: none;
+    }
+
+    @keyframes fadeInDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes floatUpDown {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
